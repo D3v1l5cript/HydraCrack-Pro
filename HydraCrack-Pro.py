@@ -4,10 +4,19 @@ import time
 import random
 import string
 import os
-
+import sys
 # ANSI escape codes for colors
 RED = '\033[91m'
 ENDC = '\033[0m'
+HEADER = '\033[95m'
+OKBLUE = '\033[94m'
+OKCYAN = '\033[96m'
+OKGREEN = '\033[92m'
+WARNING = '\033[93m'
+FAIL = '\033[91m'
+ENDC = '\033[0m'
+BOLD = '\033[1m'
+UNDERLINE = '\033[4m'
 
 # ASCII art banners
 logo_banner = RED + '''
@@ -82,16 +91,18 @@ def perform_hydra_attack_own_wordlist(target, protocol):
     print("\n")
     try:
         subprocess.run(hydra_command, shell=True, check=True)
-        print("Brute-force attack completed. Check found_credentials.txt for results.")
+        print(RED + "Brute-force attack completed. Check found_credentials.txt for results." + ENDC)
+        print("thx for using")
+        sys.exit(0)
     except subprocess.CalledProcessError as e:
         print(f"Error running Hydra: {e}")
-
+         
 # Clear the terminal when the tool starts
 clear_terminal()
 
 while True:
     print(logo_banner)
-    print("Choose an option:")
+    print(WARNING + "Choose an option:" + WARNING)
     print("1. Generate wordlist only")
     print("2. Perform Hydra attack")
     print("3. Perform Hydra attack using generated wordlist")
@@ -116,4 +127,3 @@ while True:
     else:
         print("Invalid option selected.")
 input("Press Enter to continue...")
-

@@ -21,9 +21,9 @@ This tool is a Python-based HydraCrack-Pro using Hydra with additional features 
 - colorama==0.4.4 (Check `requirements.txt` for more dependencies)
 
 ## Commands
-`git clone https://github.com/demonic-cyber/HydraCrack-Pro
-pip install -r requirements.txt
-python HydraCrack-Pro.py`
+`git clone https://github.com/demonic-cyber/HydraCrack-Pro`
+`pip install -r requirements.txt`
+`python HydraCrack-Pro.py`
 
 ## License
 

@@ -12,7 +12,7 @@ This tool is a Python-based HydraCrack-Pro using Hydra with additional features 
 
 1. Clone this repository.
 2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Run the script: `HydraCrack-Pro.py`.
+3. Run the script: `python HydraCrack-Pro.py`.
 4. Follow the on-screen instructions to utilize the tool.
 
 ## Requirements

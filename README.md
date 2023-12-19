@@ -25,6 +25,11 @@ This tool is a Python-based HydraCrack-Pro using Hydra with additional features 
 `pip install -r requirements.txt`
 `python HydraCrack-Pro.py`
 
+## Note
+- this tool in under development
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+# Happy Hacking

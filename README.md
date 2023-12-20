@@ -32,4 +32,4 @@ This tool is a Python-based HydraCrack-Pro using Hydra with additional features 
 
 This project is licensed under the [MIT License](LICENSE).
 
-# Happy Hacking
+# Happy Hacking😈

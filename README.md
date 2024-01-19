@@ -29,6 +29,7 @@ This tool is a Python-based HydraCrack-Pro using Hydra with additional features 
 
 ## Note
 - this tool in under development
+- soon new update
 
 ## License
 

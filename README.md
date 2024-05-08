@@ -6,9 +6,29 @@ This tool is a Python-based HydraCrack-Pro using Hydra with additional features 
 
 ## Features
 
-- Generate custom wordlists based on victim's name and keywords
-- Perform Hydra attacks using user's own wordlist or generated wordlist
-- Customizable attacks with options for single or multiple usernames/passwords
+### 1. Generate Wordlist
+- **Description**: Generates wordlists based on the victim's name and keywords.
+- **Functionality**:
+  - Allows the user to specify the victim's name and keywords.
+  - Generates variations of wordlists using combinations of the victim's name and keywords.
+
+### 2. Perform Hydra Attack
+- **Description**: Integrates Hydra into the program to perform brute-force attacks.
+- **Functionality**:
+  - Prompts the user for necessary information such as the target, protocol, usernames, and passwords.
+  - Constructs and executes Hydra commands with the provided parameters.
+
+### 3. Crack Wi-Fi Handshake File
+- **Description**: Utilizes tools like Aircrack-ng to crack Wi-Fi handshake files.
+- **Functionality**:
+  - Prompts the user for the path to the handshake file and, optionally, a wordlist.
+  - Executes Aircrack-ng with the provided parameters to attempt to crack the Wi-Fi password.
+
+### 4. Crack Hash Using Hashcat
+- **Description**: Integrates Hashcat into the program to crack hashes.
+- **Functionality**:
+  - Prompts the user for the hash type, path to the hash file, and path to the wordlist (if applicable).
+  - Constructs and executes Hashcat commands with the provided parameters.
 
 ## Usage
 
